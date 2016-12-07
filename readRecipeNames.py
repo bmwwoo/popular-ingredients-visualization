@@ -7,7 +7,7 @@ with open('foodNames.txt', 'rb') as f:
 
 print(recipeNames)
 
-for name in recipeNames:
+for name in recipeNames[100:]:
     url = "http://api.yummly.com/v1/api/recipes?_app_id=%s&_app_key=%s&q=%s" % (SECRET.APP_ID, SECRET.APP_KEY, name)
     print(url)
     response = requests.get(url)
